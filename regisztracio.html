@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="hu-HU">
+    <head>
+        <title>Telekocsi</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="stilus.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="tartalom">
+            <h1>Telekocsi</h1>
+            <div class="menu">
+                <ul>
+                    <li><a href="telekocsi.html">Bemutatkozás</a></li>
+               <li>Sofőrök</li>
+               <li>Utasoknak</li>
+               <li>Bejelentkezés</li>
+               <li>Regisztráció</li>
+               </ul>
+            </div>
+            <h2>Regisztráció</h2>
+            <form name="urlap" action="#" onsubmit = "return ellenoriz()" method="post">
+                <label for="nev">Név:</label>
+                <input type="text" name="nev" id="nev" required/>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required/>
+                <label for="j1">Jelszó:</label>
+                <input type="password" name="j1" id="j1" required/>
+                <label for="j2">Jelszó2:</label>
+                <input type="password" name="j2" id="j2" required/>
+                <input type="submit" value="Mentés"/>              
+            </form>
+        </div>
+        <script>
+            function ellenoriz()
+            { var j1 = document.forms([urlap][j1]).value;
+              var j2 = document.forms([urlap][j2]).value;
+              if(j1 === null || j1 === "" ||j2 === null || j2 === "")
+              {
+                  alert("Nem maradhat üresen a jeszló mező");
+                  return false;
+              }
+              else if(j1 !== j2)
+              {
+                  alert("Nem egyezik a két jelszó");
+                  return false;
+              }
+            }
+            
+        </script>
+    </body>   
+</html>
