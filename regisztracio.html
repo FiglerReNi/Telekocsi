@@ -38,18 +38,22 @@ and open the template in the editor.
         </div>
         <script>
             function ellenoriz()
-            { var j1 = document.forms([urlap][j1]).value;
-              var j2 = document.forms([urlap][j2]).value;
-              if(j1 === null || j1 === "" ||j2 === null || j2 === "")
+            {              
+              var j11 = document.urlap.j1.value;
+              var j22 = document.urlap.j2.value;
+              if(j11 === null || j11 === "" ||j22 === null || j22 === "")
               {
                   alert("Nem maradhat üresen a jeszló mező");
                   return false;
               }
-              else if(j1 !== j2)
+              else if(j11 !== j22)
               {
                   alert("Nem egyezik a két jelszó");
                   return false;
               }
+              else{
+              return true;
+            }
             }
             
         </script>
